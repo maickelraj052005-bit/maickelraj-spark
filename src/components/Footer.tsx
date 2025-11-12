@@ -13,9 +13,9 @@ export const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/maickelraj", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/maickelraj", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:maickelrajmaickelraj43@gmail.com", label: "Email" },
+    { icon: Github, href: "https://github.com/maickelraj052005-bit", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/maickelraj-s-408116294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:maickelraj052005@gmail.com", label: "Email" },
   ];
 
   return (

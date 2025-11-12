@@ -87,7 +87,7 @@ export const Hero = () => {
             <motion.a
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              href="https://github.com/maickelraj"
+              href="https://github.com/maickelraj052005-bit"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -97,7 +97,7 @@ export const Hero = () => {
             <motion.a
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              href="https://linkedin.com/in/maickelraj"
+              href="https://www.linkedin.com/in/maickelraj-s-408116294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
