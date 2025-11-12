@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { TypeAnimation } from "react-type-animation";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -39,22 +38,9 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-2xl md:text-4xl font-semibold mb-8 h-16"
+            className="text-2xl md:text-4xl font-semibold mb-8"
           >
-            <TypeAnimation
-              sequence={[
-                "Full-Stack Developer",
-                2000,
-                "DevOps Learner",
-                2000,
-                "Problem Solver",
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-              className="gradient-text"
-            />
+            <span className="gradient-text">Frontend Developer</span>
           </motion.div>
 
           <motion.p

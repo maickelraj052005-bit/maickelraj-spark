@@ -64,10 +64,10 @@ export const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
                   <a
-                    href="mailto:maickelrajmaickelraj43@gmail.com"
+                    href="mailto:maickelraj052005@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    maickelrajmaickelraj43@gmail.com
+                    maickelraj052005@gmail.com
                   </a>
                 </div>
               </div>
@@ -91,7 +91,7 @@ export const Contact = () => {
                 <h3 className="text-xl font-bold mb-4 gradient-text">Let's Build Something Amazing</h3>
                 <p className="text-muted-foreground">
                   I'm always open to discussing new projects, creative ideas, or opportunities
-                  to be part of your vision. Whether you need a full-stack developer or DevOps expertise,
+                  to be part of your vision. Whether you need a frontend developer,
                   let's connect!
                 </p>
               </div>

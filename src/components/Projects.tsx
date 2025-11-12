@@ -12,52 +12,28 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, admin dashboard, and inventory management.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "Task Management App",
-      description: "Collaborative task manager with real-time updates, drag-and-drop interface, and team features.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
-      tech: ["React", "Express", "Socket.io", "PostgreSQL"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Real-time weather application with forecasts, location search, and data visualization.",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
-      tech: ["React", "TypeScript", "Weather API", "Recharts"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "Portfolio Builder",
-      description: "SaaS platform for creating and customizing developer portfolios with templates and themes.",
+      title: "Portfolio Website",
+      description: "A modern, animated portfolio showcasing frontend development skills with glassmorphism design.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      tech: ["Next.js", "TailwindCSS", "Supabase"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      tech: ["React", "Tailwind CSS", "Framer Motion"],
+      liveUrl: "#",
+      githubUrl: "#",
     },
     {
-      title: "CI/CD Pipeline Dashboard",
-      description: "DevOps monitoring tool for tracking deployments, build status, and system health metrics.",
+      title: "Responsive Landing Page",
+      description: "Beautiful landing page with smooth animations and mobile-first responsive design.",
+      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      tech: ["HTML5", "CSS3", "JavaScript"],
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      title: "Interactive Dashboard",
+      description: "Modern dashboard UI with interactive charts and beautiful data visualizations.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      tech: ["React", "Docker", "GitHub Actions", "Node.js"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "Chat Application",
-      description: "Real-time messaging platform with file sharing, group chats, and end-to-end encryption.",
-      image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
-      tech: ["React", "Socket.io", "MongoDB", "Express"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      tech: ["React", "Chart.js", "Tailwind CSS"],
+      liveUrl: "#",
+      githubUrl: "#",
     },
   ];
 
@@ -77,7 +53,7 @@ export const Projects = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto rounded-full" />
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            A selection of projects showcasing my skills in full-stack development and DevOps
+            A selection of projects showcasing my frontend development skills
           </p>
         </motion.div>
 

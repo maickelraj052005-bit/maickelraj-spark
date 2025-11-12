@@ -18,19 +18,11 @@ export const Skills = () => {
       ],
     },
     {
-      title: "Backend",
-      skills: [
-        { name: "Node.js", level: 80, color: "from-green-500 to-emerald-600" },
-        { name: "Express.js", level: 82, color: "from-gray-600 to-gray-800" },
-        { name: "MongoDB", level: 75, color: "from-green-600 to-green-800" },
-      ],
-    },
-    {
-      title: "DevOps & Tools",
+      title: "Frontend Development",
       skills: [
         { name: "Git", level: 85, color: "from-orange-600 to-red-600" },
         { name: "GitHub Actions", level: 70, color: "from-purple-500 to-purple-700" },
-        { name: "Docker", level: 65, color: "from-blue-400 to-blue-600" },
+        { name: "Responsive Design", level: 88, color: "from-pink-500 to-purple-500" },
       ],
     },
   ];
@@ -50,7 +42,7 @@ export const Skills = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
