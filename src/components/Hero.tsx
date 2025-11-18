@@ -62,7 +62,7 @@ export const Hero = () => {
             <Button
               onClick={handleDownloadCV}
               size="lg"
-              className="glass hover:glow-primary transition-all duration-300 bg-primary/90 hover:bg-primary"
+              className="hover:glow-primary transition-all duration-300 bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               <Download className="mr-2 h-5 w-5" />
               Download CV
