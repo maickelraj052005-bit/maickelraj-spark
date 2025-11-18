@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import whiteboardProject from "@/assets/whiteboard-project.jpg";
+import loginProject from "@/assets/login-project.jpg";
 
 export const Projects = () => {
   const ref = useRef(null);
@@ -12,28 +14,20 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Portfolio Website",
-      description: "A modern, animated portfolio showcasing frontend development skills with glassmorphism design.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      tech: ["React", "Tailwind CSS", "Framer Motion"],
-      liveUrl: "#",
-      githubUrl: "#",
+      title: "Real-Time Collaborative Whiteboard Application",
+      description: "Built a fully interactive whiteboard tool with drawing, shape tools, sticky notes, text boxes, zooming, and undo/redo functionality using pure HTML, CSS, and JavaScript.",
+      image: whiteboardProject,
+      tech: ["HTML", "CSS", "JavaScript"],
+      liveUrl: "https://maickelraj052005-bit.github.io/WhiteSheet_app/",
+      githubUrl: "https://github.com/maickelraj052005-bit/Whiteboard_app",
     },
     {
-      title: "Responsive Landing Page",
-      description: "Beautiful landing page with smooth animations and mobile-first responsive design.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      tech: ["HTML5", "CSS3", "JavaScript"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Interactive Dashboard",
-      description: "Modern dashboard UI with interactive charts and beautiful data visualizations.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      tech: ["React", "Chart.js", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
+      title: "Login | Frontend User Access",
+      description: "Built a clean and responsive login page using HTML, CSS, and JavaScript. The design focuses on simplicity, user-friendly layout, and basic form validation to enhance the overall user experience.",
+      image: loginProject,
+      tech: ["HTML", "CSS", "JavaScript"],
+      liveUrl: "https://maickelraj052005-bit.github.io/Login-page/",
+      githubUrl: "https://github.com/maickelraj052005-bit/Login-page",
     },
   ];
 
@@ -57,7 +51,7 @@ export const Projects = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
