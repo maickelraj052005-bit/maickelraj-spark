@@ -5,39 +5,46 @@ import { Button } from "@/components/ui/button";
 export const Certifications = () => {
   const certifications = [
     {
-      title: "Frontend Development Certification",
-      issuer: "freeCodeCamp",
-      date: "2024",
-      description: "Comprehensive frontend development course covering HTML, CSS, JavaScript, and responsive design.",
+      title: "Cloud Computing",
+      issuer: "NPTEL",
+      date: "Jan - Apr 2025",
+      description: "Completed the NPTEL Cloud Computing certification, gaining strong fundamentals in cloud models, virtualization, storage, and cloud security with hands-on understanding of scalable cloud architectures.",
+      link: "https://drive.google.com/file/d/1dbnUngM6wWrO6lFZwGHYhhEA1LwqVvHE/view?usp=sharing"
+    },
+    {
+      title: "Building Website using AI",
+      issuer: "JUNO",
+      date: "20 May 2025",
+      description: "Completed Juno's 'Building Websites Using AI' course, learning to create responsive websites efficiently using AI-based design and development tools.",
+      link: "https://drive.google.com/file/d/1FDcesXgFzE-e-nqnuvT4wUhgRD5c62Ch/view?usp=sharing"
+    },
+    {
+      title: "Student's Chapter",
+      issuer: "The Institution of Engineers (India)",
+      date: "Valid upto 2027",
+      description: "Received the Institution of Engineers (India) – Students' Chapter Membership, recognizing active participation in engineering-related professional activities, technical events, and skill-building initiatives conducted by IEI.",
+      link: "https://drive.google.com/file/d/1-DnIrpXZqtxK7vzpdKwXZ7LX9uAkQ9dl/view?usp=sharing"
+    },
+    {
+      title: "Job Readiness Through Web Technologies",
+      issuer: "Study Comrade",
+      date: "26 May 2025",
+      description: "Completed a webinar focused on job readiness, understanding web technologies, industry needs, and how to prepare for web-based roles.",
+      link: "https://drive.google.com/file/d/10xKmGpCVdLsyxZ9kRCNd-92asUznLCi0/view?usp=sharing"
+    },
+    {
+      title: "Career Guidance Webinar",
+      issuer: "SkillDunia (in collaboration with E-Cell IIT Hyderabad)",
+      date: "4 April 2025",
+      description: "Participated in a career guidance session covering opportunities, required skills, and strategies to build a successful career path.",
       link: "#"
     },
     {
-      title: "React Developer Certification",
-      issuer: "Udemy",
-      date: "2024",
-      description: "Advanced React concepts including hooks, context API, and modern React patterns.",
-      link: "#"
-    },
-    {
-      title: "Web Design Fundamentals",
-      issuer: "Coursera",
-      date: "2023",
-      description: "Core principles of web design, UI/UX basics, and design thinking.",
-      link: "#"
-    },
-    {
-      title: "JavaScript Algorithms",
-      issuer: "HackerRank",
-      date: "2023",
-      description: "Problem solving and algorithmic thinking with JavaScript.",
-      link: "#"
-    },
-    {
-      title: "CSS Animation & Effects",
-      issuer: "Udemy",
-      date: "2023",
-      description: "Advanced CSS animations, transitions, and visual effects.",
-      link: "#"
+      title: "Professional Career Counselling",
+      issuer: "Elewayte",
+      date: "15 April 2025",
+      description: "Attended an interactive webinar on career counselling, gaining clarity on career planning, skill development, and industry expectations.",
+      link: "https://drive.google.com/file/d/1HnlMmj-j7adBmegpEdDU2Zs953q-X5KY/view?usp=sharing"
     }
   ];
 
