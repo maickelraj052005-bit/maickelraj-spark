@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code, Award, Wrench } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import profilePhoto from "@/assets/profile-photo.png";
 
 export const About = () => {
   const ref = useRef(null);
@@ -10,7 +11,7 @@ export const About = () => {
 
   const stats = [
     { icon: Code, label: "Projects", value: "3" },
-    { icon: Award, label: "Certifications", value: "5" },
+    { icon: Award, label: "Certifications", value: "6" },
     { icon: Wrench, label: "Technologies", value: "10+" },
   ];
 
@@ -40,17 +41,17 @@ export const About = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl blur-2xl opacity-30 animate-pulse" />
               <div className="relative glass rounded-2xl p-8">
                 <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-1">
-                  <div className="w-full h-full rounded-full bg-background flex items-center justify-center text-5xl font-bold gradient-text">
-                    M
-                  </div>
+                  <img 
+                    src={profilePhoto} 
+                    alt="Maickelraj Profile" 
+                    className="w-full h-full rounded-full object-cover"
+                  />
                 </div>
                 <p className="text-lg text-muted-foreground leading-relaxed space-y-3">
                   <span className="block">Hi there! 👋 I'm Maickelraj, a passionate Frontend Developer from Salem.</span>
                   <span className="block">I enjoy creating beautiful, responsive, and user-friendly websites using HTML, CSS, and JavaScript.</span>
                   <span className="block">I'm currently pursuing my B.E. in Computer Science and Engineering at Sri Shanmugha College of Engineering and Technology.</span>
                   <span className="block">I love bringing creative ideas to life through clean code and smooth animations that make every webpage more interactive and alive.</span>
-                  <span className="block">When I'm not coding, I enjoy exploring new design styles, learning modern frontend techniques, and improving my visual creativity every day.</span>
-                  <span className="block">🎯 Goal: To become a professional Frontend Developer known for clean design, performance, and creative animations.</span>
                 </p>
               </div>
             </div>
