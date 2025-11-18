@@ -4,8 +4,12 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   const handleDownloadCV = () => {
-    // Will be connected to actual CV file
-    console.log("Download CV");
+    const link = document.createElement('a');
+    link.href = '/Maickelraj_Sakthivel_Resume.pdf';
+    link.download = 'Maickelraj_Sakthivel_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleContact = () => {
@@ -62,7 +66,7 @@ export const Hero = () => {
             <Button
               onClick={handleDownloadCV}
               size="lg"
-              className="hover:glow-primary transition-all duration-300 bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="glass hover:glow-primary transition-all duration-300 bg-primary/90 hover:bg-primary text-primary-foreground"
             >
               <Download className="mr-2 h-5 w-5" />
               Download CV
