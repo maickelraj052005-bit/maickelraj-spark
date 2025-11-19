@@ -28,7 +28,7 @@ export const Footer = () => {
               <span className="gradient-text">Maickelraj</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              Full-Stack Developer & DevOps Learner building modern web applications
+              Front-End Developer building modern web applications
               with passion and precision.
             </p>
           </div>
