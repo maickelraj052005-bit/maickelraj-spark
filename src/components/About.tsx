@@ -47,11 +47,8 @@ export const About = () => {
                     className="w-full h-full rounded-full object-cover"
                   />
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed space-y-3">
-                  <span className="block">Hi there! 👋 I'm Maickelraj, a passionate Frontend Developer from Salem.</span>
-                  <span className="block">I enjoy creating beautiful, responsive, and user-friendly websites using HTML, CSS, and JavaScript.</span>
-                  <span className="block">I'm currently pursuing my B.E. in Computer Science and Engineering at Sri Shanmugha College of Engineering and Technology.</span>
-                  <span className="block">I love bringing creative ideas to life through clean code and smooth animations that make every webpage more interactive and alive.</span>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  I am a passionate frontend developer focused on creating clean, responsive, and user-friendly web interfaces. I enjoy building websites with modern web technologies and continuously improving my skills through projects and real-time learning. My goal is to develop smooth, functional, and visually appealing web experiences while growing as a developer in the tech industry.
                 </p>
               </div>
             </div>
