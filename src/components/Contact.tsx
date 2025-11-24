@@ -7,27 +7,79 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Send } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  subject: z.string().trim().min(1, "Subject is required").max(200, "Subject must be less than 200 characters"),
+  message: z.string().trim().min(20, "Message must be at least 20 characters").max(2000, "Message must be less than 2000 characters"),
+});
 
 export const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Validate form data
+      const validatedData = contactSchema.parse(formData);
 
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
+      // Call the edge function
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: validatedData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+
+      // Reset form
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      (e.target as HTMLFormElement).reset();
+    } catch (error) {
+      console.error("Error sending message:", error);
+      
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Validation Error",
+          description: error.errors[0].message,
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to send message. Please try again or email me directly.",
+          variant: "destructive",
+        });
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     });
-
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
   };
 
   return (
@@ -108,31 +160,47 @@ export const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Input
+                    name="name"
                     placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     required
+                    maxLength={100}
                     className="glass"
                   />
                 </div>
                 <div>
                   <Input
+                    name="email"
                     type="email"
                     placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     required
+                    maxLength={255}
                     className="glass"
                   />
                 </div>
                 <div>
                   <Input
+                    name="subject"
                     placeholder="Subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
                     required
+                    maxLength={200}
                     className="glass"
                   />
                 </div>
                 <div>
                   <Textarea
+                    name="message"
                     placeholder="Your Message (min 20 characters)"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     required
                     minLength={20}
+                    maxLength={2000}
                     rows={6}
                     className="glass resize-none"
                   />
