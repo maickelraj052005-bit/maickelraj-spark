@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isDark, setIsDark] = useState(() => {
@@ -73,6 +74,17 @@ export const Navbar = () => {
 
           {/* Right side buttons */}
           <div className="flex items-center gap-4">
+            <Link to="/admin">
+              <Button
+                variant="outline"
+                size="sm"
+                className="hidden md:flex items-center gap-2"
+              >
+                <Shield className="h-4 w-4" />
+                Admin
+              </Button>
+            </Link>
+
             <Button
               variant="ghost"
               size="icon"
@@ -117,6 +129,12 @@ export const Navbar = () => {
                   {link.label}
                 </button>
               ))}
+              <Link to="/admin" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Shield className="mr-2 h-4 w-4" />
+                  Admin
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}
